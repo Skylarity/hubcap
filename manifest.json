@@ -1,0 +1,11 @@
+{
+    "manifest_version": 2,
+
+    "name": "Hubcap",
+    "description": "A starting hub for your internet journey.",
+    "version": "0.0.1",
+
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    }
+}

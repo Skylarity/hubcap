@@ -1,0 +1,31 @@
+/*
+ * Fonts
+ */
+h1, h2, h3 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+div, p, th, td, li, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*
+ * Styles
+ */
+
+.color-bg {
+    background-color: #ff5700;
+}
+
+.white-text {
+    color: white;
+}
+
+.panel-primary {
+    border-color: #ff5700;
+}
+
+.panel-primary>.panel-heading {
+    background-color: #ff5700;
+    border-color: #ff5700;
+}

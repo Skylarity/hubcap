@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app="Hubcap">
+	<head>
+        <!-- Bootstrap compiled and minified CSS -->
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+
+        <!-- Bootstrap compiled and minified JavaScript -->
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- AngularJS because why not-->
+        <script src="angular/resources/angular.min.js"></script>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+        <!-- Google Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Quicksand|Roboto:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+        <!-- Custom CSS -->
+		<link rel="stylesheet" href="css/style.css"/>
+
+        <!-- Custom Angular -->
+        <script src="angular/app.js"></script>
+        <script src="angular/controllers/reddit-controller.js"></script>
+        <script src="angular/controllers/notepad-controller.js"></script>
+        <script src="angular/services/reddit-service.js"></script>
+
+		<title>New Tab</title>
+	</head>
+
+	<body>
+		<div class="jumbotron color-bg white-text">
+			<div class="container">
+				<h1 class="text-center">HUBCAP</h1>
+			</div>
+		</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><a href="https://www.reddit.com/"><i class="fa fa-reddit-alien"></i>&nbsp;Reddit</a></h3>
+                        </div>
+                        <div class="panel-body">
+                            Reddit feed here!
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" ng-controller="NotepadController">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-pencil"></i>&nbsp;Notepad</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div>
+                                <label>Name:</label>
+                                <input type="text" ng-model="yourName" placeholder="Enter a name here">
+                                <hr>
+                                <h2>Hello {{yourName}}!</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><a href="https://github.com/"><i class="fa fa-github"></i>&nbsp;GitHub</a></h3>
+                        </div>
+                        <div class="panel-body">
+                            GitHub feed here!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container well">
+            <h3>NOTES:</h3>
+            <br />
+            <p>
+                Hubcap <small>(WIP name, hubcap because chrome hubcaps and it's a "hub" of info wowowowowow soper smurt joek)</small>
+            </p>
+            <ul>
+                <li>
+                    Can be used as a homepage, or maybe replace the new tab page.
+                </li>
+                <li>
+                    Google search bar up top
+                </li>
+                <li>
+                    Several panes of information underneath
+                </li>
+                <li>
+                    e.g. reddit scraper, GitHub scraper, todo list notepad thing
+                </li>
+            </ul>
+        </div>
+	</body>
+</html>
