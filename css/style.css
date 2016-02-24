@@ -1,11 +1,11 @@
 /*
  * Fonts
  */
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: 'Quicksand', sans-serif;
 }
 
-div, p, th, td, li, h4, h5, h6 {
+div, p, th, td, li, h5, h6 {
     font-family: 'Roboto', sans-serif;
 }
 
