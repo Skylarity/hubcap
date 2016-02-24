@@ -3,9 +3,19 @@
 
     "name": "Hubcap",
     "description": "A starting hub for your internet journey.",
-    "version": "0.0.1",
+    "version": "0.0.10",
 
     "chrome_url_overrides": {
         "newtab": "index.html"
+    },
+
+    "icons": {
+        "16": "img/hubcap-logo16.png",
+        "32": "img/hubcap-logo32.png",
+        "48": "img/hubcap-logo48.png",
+        "64": "img/hubcap-logo64.png",
+        "128": "img/hubcap-logo128.png",
+        "256": "img/hubcap-logo256.png",
+        "512": "img/hubcap-logo512.png"
     }
 }

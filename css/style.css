@@ -29,3 +29,15 @@ div, p, th, td, li, h4, h5, h6 {
     background-color: #ff5700;
     border-color: #ff5700;
 }
+
+.add-task {
+    cursor: pointer;
+}
+
+.add-task:hover {
+    box-shadow: inset 0 0 10px -5px rgba(0,0,0,0.75);
+}
+
+.add-task:active {
+    box-shadow: inset 0 0 10px -3px rgba(0,0,0,0.75);
+}

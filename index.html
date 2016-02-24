@@ -4,6 +4,9 @@
         <!-- Bootstrap compiled and minified CSS -->
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 
+		<!-- JQuery wow -->
+		<script src="jquery/jquery-2.2.1.min.js"></script>
+
         <!-- Bootstrap compiled and minified JavaScript -->
         <script src="bootstrap/js/bootstrap.min.js"></script>
 
@@ -49,19 +52,22 @@
                 <div class="col-md-4" ng-controller="NotepadController">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <h3 class="panel-title"><i class="fa fa-pencil"></i>&nbsp;Notepad</h3>
+                            <h3 class="panel-title"><i class="fa fa-pencil"></i>&nbsp;To Do</h3>
                         </div>
                         <div class="panel-body">
 							<form class="form-horizontal">
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="task">Task:</label>
-									<div class="col-sm-10">
-										<input class="form-control" type="text" id="task" ng-model="task" placeholder="Task" />
+									<label class="col-sm-2 control-label sr-only" for="task">Task:</label>
+									<div class="col-sm-12">
+										<div class="input-group">
+											<input class="form-control" type="text" id="task" ng-model="task" placeholder="Task" />
+											<div class="input-group-addon add-task" ng-click="addTask(task);"><i class="fa fa-plus"></i></div>
+										</div>
 									</div>
 								</div>
 							</form>
                             <hr>
-                            <h2>To Do: {{task}}</h2>
+                            <h3>To Do: {{task}}</h3>
                         </div>
                     </div>
                 </div>
@@ -76,27 +82,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container well">
-            <h3>NOTES:</h3>
-            <br />
-            <p>
-                Hubcap <small>(WIP name, hubcap because chrome hubcaps and it's a "hub" of info wowowowowow soper smurt joek)</small>
-            </p>
-            <ul>
-                <li>
-                    Can be used as a homepage, or maybe replace the new tab page.
-                </li>
-                <li>
-                    Google search bar up top
-                </li>
-                <li>
-                    Several panes of information underneath
-                </li>
-                <li>
-                    e.g. reddit scraper, GitHub scraper, todo list notepad thing
-                </li>
-            </ul>
         </div>
 	</body>
 </html>
