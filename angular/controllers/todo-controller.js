@@ -1,3 +1,7 @@
 app.controller("TodoController", ["$scope", function($scope) {
-    // TODO
+    $scope.task = {};
+
+    $scope.addTask(task) {
+        console.log(task);
+    };
 }]);

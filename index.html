@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html ng-app="Hubcap">
 	<head>
-        <!-- Bootstrap compiled and minified CSS -->
-        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+		<!-- Bootstrap compiled and minified CSS -->
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 
-		<!-- JQuery wow -->
+		<!-- JQuery -->
 		<script src="jquery/jquery-2.2.1.min.js"></script>
 
-        <!-- Bootstrap compiled and minified JavaScript -->
-        <script src="bootstrap/js/bootstrap.min.js"></script>
+		<!-- Bootstrap compiled and minified JavaScript -->
+		<script src="bootstrap/js/bootstrap.min.js"></script>
 
-        <!-- AngularJS because why not-->
-        <script src="angular/resources/angular.min.js"></script>
+		<!-- AngularJS -->
+		<script src="angular/resources/angular.min.js"></script>
 
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
-        <!-- Google Fonts -->
-        <link href='https://fonts.googleapis.com/css?family=Quicksand|Roboto:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+		<!-- Google Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Quicksand|Roboto:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
-        <!-- Custom CSS -->
+		<!-- Custom CSS -->
 		<link rel="stylesheet" href="css/style.css"/>
 
-        <!-- Custom Angular -->
-        <script src="angular/app.js"></script>
-        <script src="angular/controllers/reddit-controller.js"></script>
-        <script src="angular/controllers/todo-controller.js"></script>
-        <script src="angular/services/reddit-service.js"></script>
+		<!-- Custom Angular -->
+		<script src="angular/app.js"></script>
+		<script src="angular/controllers/reddit-controller.js"></script>
+		<script src="angular/controllers/todo-controller.js"></script>
+		<script src="angular/services/reddit-service.js"></script>
 
 		<title>New Tab</title>
 	</head>
@@ -55,13 +55,15 @@
                             <h3 class="panel-title"><i class="fa fa-pencil"></i>&nbsp;To Do</h3>
                         </div>
                         <div class="panel-body">
-							<form class="form-horizontal" name="todoForm">
+							<form class="form-horizontal" novalidate name="todoForm" ng-submit="addTask(task);">
 								<div class="form-group">
 									<label class="col-sm-2 control-label sr-only" for="task">Task:</label>
 									<div class="col-sm-12">
 										<div class="input-group">
-											<input class="form-control" type="text" id="task" ng-model="task" placeholder="Task" />
-											<div class="input-group-addon add-task" ng-click="addTask(task);"><i class="fa fa-plus"></i></div>
+											<input class="form-control" type="text" id="task" name="task" ng-model="task.task" placeholder="Task" />
+											<div class="input-group-addon">
+												<button type="submit" class="add-task"><i class="fa fa-plus"></i></button>
+											</div>
 										</div>
 									</div>
 								</div>
