@@ -27,9 +27,9 @@
 
 		<!-- Custom Angular -->
 		<script src="angular/app.js"></script>
-		<script src="angular/controllers/reddit-controller.js"></script>
+		<!-- <script src="angular/services/reddit-service.js"></script> -->
+		<!-- <script src="angular/controllers/reddit-controller.js"></script> -->
 		<script src="angular/controllers/todo-controller.js"></script>
-		<script src="angular/services/reddit-service.js"></script>
 
 		<title>New Tab</title>
 	</head>
@@ -73,8 +73,8 @@
 							</form>
 							<hr>
 							<ol>
-								<li>
-									<h4>{{task}}</h4>
+								<li ng-repeat="task in tasks">
+									<h4>{{task.task}}</h4>
 								</li>
 							</ol>
 						</div>
