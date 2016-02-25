@@ -33,3 +33,13 @@ div, p, th, td, li, h5, h6 {
 .add-task {
 
 }
+
+.box-1 {
+    -webkit-animation-delay: 0s;
+}
+.box-2 {
+    -webkit-animation-delay: 0.1s;
+}
+.box-3 {
+    -webkit-animation-delay: 0.2s;
+}
