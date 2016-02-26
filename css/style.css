@@ -30,8 +30,21 @@ div, p, th, td, li, h5, h6 {
     border-color: #ff5700;
 }
 
-.add-task {
+.tasks {
+    padding-left: 0; 
+    list-style: none;
+}
 
+.task {
+    display: inline-block;
+}
+
+.done-false {
+
+}
+
+.done-true {
+    text-decoration: line-through;
 }
 
 .box-1 {

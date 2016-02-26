@@ -3,9 +3,24 @@ app.controller("TodoController", ["$scope", "$localStorage", function($scope, $l
     $scope.tasks = [];
 
     $scope.addTask = function(task) {
+        task.done = false;
         $scope.tasks.push(task);
         $scope.save();
         $scope.task = {};
+    };
+
+    $scope.archive = function() {
+        var oldTasks = $scope.tasks;
+        $scope.tasks = [];
+        angular.forEach(oldTasks, function(task) {
+            if (!task.done) $scope.tasks.push(task);
+        });
+        $scope.save();
+    };
+
+    $scope.archiveAll = function() {
+        $scope.tasks = [];
+        $scope.save();
     };
 
     $scope.save = function() {

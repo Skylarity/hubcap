@@ -68,18 +68,27 @@
 										<div class="input-group">
 											<input class="form-control" type="text" id="task" name="task" ng-model="task.task" placeholder="What are you up to?" />
 											<div class="input-group-addon">
-												<button type="submit" class="add-task"><i class="fa fa-plus"></i></button>
+												<button type="submit"><i class="fa fa-plus"></i></button>
 											</div>
 										</div>
 									</div>
 								</div>
 							</form>
+							<div class="row">
+								<div class="col-xs-12">
+									<input type="button" class="btn btn-success btn-xs" ng-click="archive();" value="Archive" />
+									<input type="button" class="btn btn-danger btn-xs pull-right" ng-click="archiveAll();" value="Archive All" />
+								</div>
+							</div>
 							<hr>
-							<ol>
+							<h4 class="text-center" ng-show="{{tasks.length <= 0}}">All done!</h4>
+							<ul class="tasks">
 								<li ng-repeat="task in tasks">
-									<h4>{{task.task}}</h4>
+									<input type="checkbox" ng-click="save();" ng-model="task.done" />
+									&nbsp;
+									<h4 class="task done-{{task.done}}">{{task.task}}</h4>
 								</li>
-							</ol>
+							</ul>
 						</div>
 					</div>
 				</div>
