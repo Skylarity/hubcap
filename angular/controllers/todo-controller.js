@@ -1,12 +1,14 @@
 app.controller("TodoController", ["$scope", "$localStorage", function($scope, $localStorage) {
     $scope.task = {};
     $scope.tasks = [];
+    $scope.noTasks = true;
+    $scope.archiveAllConfirm = false;
 
     $scope.addTask = function(task) {
         task.done = false;
         $scope.tasks.push(task);
-        $scope.save();
         $scope.task = {};
+        $scope.save();
     };
 
     $scope.archive = function() {
@@ -18,18 +20,34 @@ app.controller("TodoController", ["$scope", "$localStorage", function($scope, $l
         $scope.save();
     };
 
-    $scope.archiveAll = function() {
+    $scope.archiveAllConfirmCheck = function () {
+        $scope.archiveAllConfirm = true;
+    }
+
+    $scope.archiveAllYes = function() {
         $scope.tasks = [];
+        $scope.archiveAllConfirm = false;
         $scope.save();
+    };
+    $scope.archiveAllNo = function() {
+        $scope.archiveAllConfirm = false;
     };
 
     $scope.save = function() {
         $localStorage.tasks = $scope.tasks;
+        if ($scope.tasks.length > 0) {
+            $scope.noTasks = false;
+        } else {
+            $scope.noTasks = true;
+        }
     };
 
     $scope.load = function() {
         if ($localStorage.tasks !== undefined) {
             $scope.tasks = $localStorage.tasks;
+            if ($scope.tasks.length > 0) {
+                $scope.noTasks = false;
+            }
         }
     };
 
