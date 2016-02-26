@@ -93,9 +93,14 @@
 							<h4 class="text-center alert alert-success" ng-show="noTasks">All done!</h4>
 							<ul class="tasks">
 								<li class="alert" ng-click="task.done = !task.done" ng-class="{'alert-success': task.done}" ng-repeat="task in tasks">
-									<input type="checkbox" ng-click="save();" ng-model="task.done" />
-									&nbsp;
-									<h4 class="task done-{{task.done}}">{{task.task}}</h4>
+									<div class="row">
+										<div class="col-xs-1">
+											<input type="checkbox" ng-click="save();" ng-model="task.done" />
+										</div>
+										<div class="col-xs-10">
+											<h4 class="task done-{{task.done}}">{{task.task}}</h4>
+										</div>
+									</div>
 								</li>
 							</ul>
 						</div>
