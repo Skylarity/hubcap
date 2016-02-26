@@ -92,15 +92,8 @@
 							<hr>
 							<h4 class="text-center alert alert-success" ng-show="noTasks">All done!</h4>
 							<ul class="tasks">
-								<li class="alert" ng-click="task.done = !task.done" ng-class="{'alert-success': task.done}" ng-repeat="task in tasks">
-									<div class="row">
-										<div class="col-xs-1">
-											<input type="checkbox" ng-click="save();" ng-model="task.done" />
-										</div>
-										<div class="col-xs-10">
-											<h4 class="task done-{{task.done}}">{{task.task}}</h4>
-										</div>
-									</div>
+								<li class="alert task" ng-click="task.done = !task.done; save();" ng-class="{'alert-success': task.done}" ng-repeat="task in tasks">
+									<h4 class="task-text done-{{task.done}}"><i class="fa" ng-class="{'fa-square-o':!task.done, 'fa-check-square-o':task.done}"></i>&nbsp;{{task.task}}</h4>
 								</li>
 							</ul>
 						</div>

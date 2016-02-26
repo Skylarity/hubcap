@@ -40,6 +40,10 @@ div, p, th, td, li, h5, h6 {
 }
 
 .task {
+    cursor: pointer;
+}
+
+.task-text {
     display: inline;
 }
 
@@ -48,7 +52,7 @@ div, p, th, td, li, h5, h6 {
 }
 
 .done-true {
-    text-decoration: line-through;
+    /*text-decoration: line-through;*/
 }
 
 .box-1 {
