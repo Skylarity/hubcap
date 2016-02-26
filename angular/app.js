@@ -1,1 +1,1 @@
-var app = angular.module("Hubcap", []);
+var app = angular.module("Hubcap", ["ngStorage"]);
