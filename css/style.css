@@ -13,6 +13,10 @@ div, p, th, td, li, h5, h6 {
  * Styles
  */
 
+ ul > .alert {
+     padding: 8px 5px 2px 5px;
+ }
+
 .color-bg {
     background-color: #ff5700;
 }
@@ -31,7 +35,7 @@ div, p, th, td, li, h5, h6 {
 }
 
 .tasks {
-    padding-left: 0; 
+    padding-left: 0;
     list-style: none;
 }
 
