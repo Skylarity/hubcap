@@ -3,7 +3,7 @@
 
     "name": "Hubcap",
     "description": "A starting hub for your internet journey.",
-    "version": "0.0.10",
+    "version": "0.1.0",
 
     "chrome_url_overrides": {
         "newtab": "index.html"
