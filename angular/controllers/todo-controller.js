@@ -17,7 +17,9 @@ app.controller("TodoController", ["$scope", "$localStorage", function($scope, $l
         var oldTasks = $scope.tasks;
         $scope.tasks = [];
         angular.forEach(oldTasks, function(task) {
-            if (!task.done) $scope.tasks.push(task);
+            if (!task.done) {
+                $scope.tasks.push(task);
+            }
         });
         $scope.save();
     };
