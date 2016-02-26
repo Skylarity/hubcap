@@ -5,10 +5,12 @@ app.controller("TodoController", ["$scope", "$localStorage", function($scope, $l
     $scope.archiveAllConfirm = false;
 
     $scope.addTask = function(task) {
-        task.done = false;
-        $scope.tasks.push(task);
-        $scope.task = {};
-        $scope.save();
+        if (task.task.length > 0) {
+            task.done = false;
+            $scope.tasks.push(task);
+            $scope.task = {};
+            $scope.save();
+        }
     };
 
     $scope.archive = function() {
