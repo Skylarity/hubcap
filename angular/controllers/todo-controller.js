@@ -21,8 +21,10 @@ app.controller("TodoController", ["$scope", "$localStorage", function($scope, $l
     };
 
     $scope.archiveAllConfirmCheck = function () {
-        $scope.archiveAllConfirm = true;
-    }
+        if ($scope.tasks.length > 0) {
+            $scope.archiveAllConfirm = true;
+        }
+    };
 
     $scope.archiveAllYes = function() {
         $scope.tasks = [];
