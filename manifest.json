@@ -17,5 +17,10 @@
         "128": "img/hubcap-logo128.png",
         "256": "img/hubcap-logo256.png",
         "512": "img/hubcap-logo512.png"
-    }
+    },
+
+    "permissions": [
+        "https://ajax.googleapis.com/ajax/services/feed/*"
+    ],
+    "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
 }
