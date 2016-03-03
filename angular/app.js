@@ -1,1 +1,1 @@
-var app = angular.module("Hubcap", ["ngStorage"]);
+var app = angular.module("Hubcap", ["ngStorage", "ngSanitize"]);

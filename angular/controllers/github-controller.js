@@ -4,7 +4,6 @@ app.controller("GithubController", ["$scope", "GithubService", function($scope, 
 
     GithubService.getFeed($scope.feedUrl)
         .then(function(result) {
-            $scope.feed=result.data.responseData.feed;
-            console.log($scope.feed);
+            $scope.feed = result.data.responseData.feed;
         })
 }]);

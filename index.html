@@ -16,6 +16,9 @@
 		<!-- ngStorage -->
 		<script src="angular/resources/ng-storage.min.js"></script>
 
+		<!-- ngSanitize -->
+		<script src="angular/resources/angular-sanitize.min.js"></script>
+
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
@@ -48,7 +51,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
-					<div class="panel panel-primary animated flipInX box-1">
+					<div class="panel panel-primary animated fadeInUp box-1">
 						<div class="panel-heading">
 							<h3 class="panel-title"><a href="https://www.reddit.com/"><i class="fa fa-reddit-alien"></i>&nbsp;Reddit</a></h3>
 						</div>
@@ -58,7 +61,7 @@
 					</div>
 				</div>
 				<div class="col-md-4" ng-controller="TodoController">
-					<div class="panel panel-primary animated flipInX box-2">
+					<div class="panel panel-primary animated fadeInUp box-2">
 						<div class="panel-heading">
 							<h3 class="panel-title"><i class="fa fa-pencil"></i>&nbsp;To Do</h3>
 						</div>
@@ -100,13 +103,19 @@
 					</div>
 				</div>
 				<div class="col-md-4" ng-controller="GithubController">
-					<div class="panel panel-primary animated flipInX box-3">
+					<div class="panel panel-primary animated fadeInUp box-3">
 						<div class="panel-heading">
 							<h3 class="panel-title"><a href="https://github.com/"><i class="fa fa-github"></i>&nbsp;GitHub</a></h3>
 						</div>
 						<div class="panel-body">
-							GitHub feed here!
+							<h3>{{ feed.title }}</h3>
 							<hr>
+							<div ng-repeat="entry in feed.entries">
+								<h4>{{ entry.title }} <small>&mdash; {{ entry.author }}</small></h4>
+								<a href="{{ entry.link }}">{{ entry.link }}</a>
+								<p ng-bind-html="entry.content"></p>
+								<hr>
+							</div>
 							<small class="text-muted">Feed: {{feedUrl}}</small>
 						</div>
 					</div>
