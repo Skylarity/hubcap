@@ -71,6 +71,9 @@ h1 {
 .task {
 	cursor: pointer;
 	transition: 0.1s all;
+	border: none;
+	border-radius: 4px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .task-text {
@@ -98,8 +101,9 @@ h1 {
 .reddit-post {
 	margin: 0 0 10px 0;
 	padding: 10px;
-	border: 1px solid #ddd;
+	/*border: 1px solid #ddd;*/
 	border-radius: 4px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 	color: #333;
 	text-decoration: none;
 	transition: 0.2s all;
