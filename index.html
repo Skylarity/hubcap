@@ -83,7 +83,7 @@
 								<div class="col-xs-12">
 									<input type="button" class="btn btn-success btn-xs" ng-click="archive();" value="Clear Done" />
 									<input type="button" class="btn btn-default btn-xs pull-right" ng-hide="archiveAllConfirm" ng-click="archiveAllConfirmCheck();" value="Clear All" />
-									<span class="pull-right alert alert-danger" ng-show="archiveAllConfirm">
+									<span class="pull-right" ng-show="archiveAllConfirm">
 										<span>Are you sure?</span>
 										&nbsp;
 										<input type="button" class="btn btn-danger btn-xs" ng-click="archiveAllYes();" value="Yes" />
@@ -93,7 +93,7 @@
 								</div>
 							</div>
 							<hr>
-							<h4 class="text-center alert alert-success" ng-show="noTasks">All done!</h4>
+							<h4 class="text-center alert alert-success" ng-show="noTasks">No tasks to do!</h4>
 							<ul class="tasks">
 								<li class="alert task" ng-click="task.done = !task.done; save();" ng-class="{'alert-success': task.done}" ng-repeat="task in tasks">
 									<h4 class="task-text done-{{task.done}}"><i class="fa" ng-class="{'fa-square-o':!task.done, 'fa-check-square-o':task.done}"></i>&nbsp;{{task.task}}</h4>
