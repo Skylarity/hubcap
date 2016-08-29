@@ -9,6 +9,7 @@ app.controller("TodoController", ["$scope", "$localStorage", function($scope, $l
 			task.done = false;
 			$scope.tasks.push(task);
 			$scope.task = {};
+			$scope.orderTasks();
 			$scope.save();
 		}
 	};
