@@ -29,6 +29,10 @@ a:focus {
 	text-decoration: underline;
 }
 
+.btn {
+	transition: 0.1s all;
+}
+
 .color-bg {
     background-color: #ff5700;
 }
@@ -53,6 +57,7 @@ a:focus {
 
 .task {
     cursor: pointer;
+	transition: 0.1s all;
 }
 
 .task-text {
@@ -95,7 +100,7 @@ a:focus {
 .reddit-title:visited {
 	color: #333;
 	text-decoration: none;
-	transition: 0.2s all;
+	transition: 0.1s all;
 }
 
 .reddit-title:hover,
@@ -114,6 +119,7 @@ a:focus {
 .reddit-post-link:visited {
 	color: #aaa;
 	text-decoration: none;
+	transition: 0.1s all;
 }
 
 .reddit-post-link,
