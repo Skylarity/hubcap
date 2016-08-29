@@ -118,15 +118,15 @@
 							</form>
 							<div class="row">
 								<div class="col-xs-12">
-									<input type="button" class="btn btn-success btn-xs" ng-click="archive();" value="Clear Done" />
-									<input type="button" class="btn btn-default btn-xs pull-right" ng-hide="archiveAllConfirm" ng-click="archiveAllConfirmCheck();" value="Clear All" />
-									<span class="pull-right" ng-show="archiveAllConfirm">
+									<input type="button" class="btn btn-default btn-xs" ng-hide="archiveAllConfirm" ng-click="archiveAllConfirmCheck();" value="Clear All" />
+									<span ng-show="archiveAllConfirm">
 										<span>Are you sure?</span>
 										&nbsp;
 										<input type="button" class="btn btn-danger btn-xs" ng-click="archiveAllYes();" value="Yes" />
 										&nbsp;
 										<input type="button" class="btn btn-default btn-xs" ng-click="archiveAllNo();" value="No" />
 									</span>
+									<input type="button" class="btn btn-success btn-xs pull-right" ng-click="archive();" value="Clear Done" />
 								</div>
 							</div>
 							<hr>
