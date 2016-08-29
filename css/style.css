@@ -17,6 +17,18 @@ ul > .alert {
 	padding: 6px 5px 4px 5px;
 }
 
+a,
+a:visited {
+	color: #ff5700;
+	text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+	text-decoration: underline;
+}
+
 .color-bg {
     background-color: #ff5700;
 }
