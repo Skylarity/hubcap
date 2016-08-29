@@ -33,6 +33,10 @@ a:focus {
 	transition: 0.1s all;
 }
 
+.text-green {
+	color: #5cb85c;
+}
+
 .color-bg {
     background-color: #ff5700;
 }
