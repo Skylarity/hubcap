@@ -73,10 +73,10 @@
 							<div ng-repeat="child in feed.children.slice(0, 10)">
 								<div class="row reddit-post">
 									<div class="col-md-2">
-										<div ng-hide="child.data.thumbnail === 'default' || child.data.thumbnail === ''">
+										<div ng-hide="child.data.thumbnail === 'default' || child.data.thumbnail === 'self' || child.data.thumbnail === ''">
 											<img src="{{ child.data.thumbnail }}" alt="thumbnail" class="img-reponsive reddit-thumbnail">
 										</div>
-										<div ng-show="child.data.thumbnail === 'default' || child.data.thumbnail === ''">
+										<div ng-show="child.data.thumbnail === 'default' || child.data.thumbnail === 'self' || child.data.thumbnail === ''">
 											<i class="fa fa-3x fa-reddit"></i>
 										</div>
 									</div>
