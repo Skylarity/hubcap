@@ -135,7 +135,7 @@
 								<i class="fa fa-5x fa-smile-o"></i>
 							</h4>
 							<ul class="tasks">
-								<li class="alert task" ng-click="task.done = !task.done; orderTasks(); save();" ng-class="{'text-green': task.done}" ng-repeat="task in tasks" ng-hide="task.done">
+								<li class="alert task" ng-click="task.done = !task.done; orderTasks(); save();" ng-class="{'text-green': task.done}" ng-repeat="task in tasks">
 									<h4 class="task-text done-{{task.done}}"><i class="fa fa-fw" ng-class="{'fa-square-o':!task.done, 'fa-check-square-o':task.done}"></i>&nbsp;{{task.task}}</h4>
 								</li>
 							</ul>

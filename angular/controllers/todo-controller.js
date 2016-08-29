@@ -13,6 +13,20 @@ app.controller("TodoController", ["$scope", "$localStorage", function($scope, $l
         }
     };
 
+	$scope.orderTasks = function() {
+		var done = [], notDone = [];
+		$scope.tasks.forEach(function(task) {
+			if (task.done) {
+				done.push(task);
+			} else {
+				notDone.push(task);
+			}
+		});
+		var totalTasks = notDone.concat(done);
+		$scope.tasks = totalTasks;
+		$scope.save();
+	};
+
     $scope.archive = function() {
         var oldTasks = $scope.tasks;
         $scope.tasks = [];
