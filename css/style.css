@@ -13,9 +13,9 @@ div, p, th, td, li, h5, h6 {
  * Styles
  */
 
- ul > .alert {
-     padding: 6px 5px 4px 5px;
- }
+ul > .alert {
+	padding: 6px 5px 4px 5px;
+}
 
 .color-bg {
     background-color: #ff5700;
