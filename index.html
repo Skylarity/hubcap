@@ -130,7 +130,7 @@
 								</div>
 							</div>
 							<hr>
-							<h4 class="text-center alert alert-success" ng-show="noTasks">No tasks to do!</h4>
+							<h4 class="text-center alert alert-success" ng-show="noTasks"><i class="fa fa-lg fa-smile-o"></i> No tasks to do!</h4>
 							<ul class="tasks">
 								<li class="alert task" ng-click="task.done = !task.done; save();" ng-class="{'alert-success': task.done}" ng-repeat="task in tasks">
 									<h4 class="task-text done-{{task.done}}"><i class="fa" ng-class="{'fa-square-o':!task.done, 'fa-check-square-o':task.done}"></i>&nbsp;{{task.task}}</h4>
