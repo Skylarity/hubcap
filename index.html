@@ -56,8 +56,41 @@
 							<h3 class="panel-title"><a href="https://www.reddit.com/"><i class="fa fa-reddit-alien"></i>&nbsp;Reddit</a></h3>
 						</div>
 						<div class="panel-body">
-							<div ng-repeat="child in feed.children.slice(0, 9)" class="reddit-post">
-								<h4>{{ child.data.title }}</h4>
+							<form class="form-horizontal" novalidate name="subredditForm" ng-submit="setSubreddit(subreddit)">
+								<div class="form-group">
+									<label class="control-label sr-only" for="subreddit">Subreddit Name</label>
+									<div class="col-sm-12">
+										<div class="input-group">
+											<div class="input-group-addon">/r/</div>
+											<input class="form-control" type="text" id="subreddit" name="subreddit" ng-model="subreddit"/>
+											<div class="input-group-btn">
+												<button type="submit" class="btn btn-success"><i class="fa fa-lg fa-reddit"></i></button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+							<div ng-repeat="child in feed.children.slice(0, 9)">
+									<div class="row reddit-post">
+										<div class="col-md-2">
+											<!-- <div class="reddit-score">
+												{{ child.data.score }}
+											</div> -->
+											<img src="{{ child.data.thumbnail }}" alt="thumbnail" class="img-reponsive reddit-thumbnail">
+										</div>
+										<div class="col-md-10">
+											<div class="row">
+												<a href="https://reddit.com{{ child.data.permalink }}" target="_blank" class="reddit-title">
+													<h4>{{ child.data.title }}</h4>
+												</a>
+											</div>
+											<div class="row">
+												<a href="{{ child.data.url }}" target="_blank" class="reddit-post-link">
+													<small><i class="fa fa-external-link"></i> direct link</small>
+												</a>
+											</div>
+										</div>
+									</div>
 							</div>
 						</div>
 					</div>

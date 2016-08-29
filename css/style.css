@@ -67,7 +67,52 @@ div, p, th, td, li, h5, h6 {
 
 .reddit-post {
 	margin: 0 0 10px 0;
-	padding: 0 10px;
+	padding: 10px;
 	border: 1px solid #ddd;
 	border-radius: 4px;
+	color: #333;
+	text-decoration: none;
+	transition: 0.2s all;
+}
+
+.reddit-score {
+	color: #ff5700;
+}
+
+.reddit-title,
+.reddit-title:visited {
+	color: #333;
+	text-decoration: none;
+	transition: 0.2s all;
+}
+
+.reddit-title:hover,
+.reddit-title:active,
+.reddit-title:focus {
+	text-decoration: none;
+	color: #ff5700;
+}
+
+.reddit-title h4 {
+	padding: 0;
+	margin: 0;
+}
+
+.reddit-post-link,
+.reddit-post-link:visited {
+	color: #aaa;
+	text-decoration: none;
+}
+
+.reddit-post-link,
+.reddit-post-link:hover,
+.reddit-post-link:active,
+.reddit-post-link:focus {
+	color: #666;
+	text-decoration: none;
+}
+
+.reddit-thumbnail {
+	width: 100%;
+	height: auto;
 }
