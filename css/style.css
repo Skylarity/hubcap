@@ -2,11 +2,11 @@
  * Fonts
  */
 h1, h2, h3, h4 {
-    font-family: 'Quicksand', sans-serif;
+	font-family: 'Quicksand', sans-serif;
 }
 
 div, p, th, td, li, h5, h6 {
-    font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 /*
@@ -47,34 +47,34 @@ h1 {
 }
 
 .color-bg {
-    background-color: #ff5700;
+	background-color: #333;
 }
 
 .white-text {
-    color: white;
+	color: white;
 }
 
 .panel-primary {
-    border-color: #ff5700;
+	border-color: #333;
 }
 
 .panel-primary>.panel-heading {
-    background-color: #ff5700;
-    border-color: #ff5700;
+	background-color: #333;
+	border-color: #333;
 }
 
 .tasks {
-    padding-left: 0;
-    list-style: none;
+	padding-left: 0;
+	list-style: none;
 }
 
 .task {
-    cursor: pointer;
+	cursor: pointer;
 	transition: 0.1s all;
 }
 
 .task-text {
-    display: inline;
+	display: inline;
 }
 
 .done-false {
@@ -82,17 +82,17 @@ h1 {
 }
 
 .done-true {
-    /*text-decoration: line-through;*/
+	/*text-decoration: line-through;*/
 }
 
 .box-1 {
-    -webkit-animation-delay: 0s;
+	-webkit-animation-delay: 0s;
 }
 .box-2 {
-    -webkit-animation-delay: 0.1s;
+	-webkit-animation-delay: 0.1s;
 }
 .box-3 {
-    -webkit-animation-delay: 0.2s;
+	-webkit-animation-delay: 0.2s;
 }
 
 .reddit-post {
