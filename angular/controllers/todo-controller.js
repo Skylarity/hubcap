@@ -17,7 +17,7 @@ app.controller("TodoController", ["$scope", "$localStorage", function($scope, $l
 		var done = [], notDone = [];
 		$scope.tasks.forEach(function(task) {
 			if (task.done) {
-				done.push(task);
+				done.splice(0, 0, task);
 			} else {
 				notDone.push(task);
 			}
