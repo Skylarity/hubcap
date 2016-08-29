@@ -1,4 +1,4 @@
-app.controller("RedditController", ["$scope", "RedditService", function($scope, RedditService) {
+app.controller("RedditController", ["$scope", "$localStorage", "RedditService", function($scope, $localStorage, RedditService) {
 	$scope.subreddit = "";
 	$scope.feedUrl = "";
 	$scope.feed = {};
@@ -15,6 +15,7 @@ app.controller("RedditController", ["$scope", "RedditService", function($scope, 
 			$scope.subreddit = subreddit;
 			$scope.setFeedUrl($scope.subreddit);
 			$scope.getFeed($scope.feedUrl);
+			$scope.save();
 		}
 	};
 
@@ -22,8 +23,20 @@ app.controller("RedditController", ["$scope", "RedditService", function($scope, 
 		$scope.feedUrl = "https://www.reddit.com/r/" + subreddit + ".json";
 	};
 
+	$scope.save = function() {
+		$localStorage.subreddit = $scope.subreddit;
+	};
+
+	$scope.load = function() {
+		if ($localStorage.subreddit !== undefined) {
+			$scope.subreddit = $localStorage.subreddit;
+		} else {
+			$scope.subreddit = "ProgrammerHumor";
+		}
+	};
+
 	if ($scope.subreddit.length === 0) {
-		$scope.subreddit = "ProgrammerHumor";
+		$scope.load();
 		$scope.setFeedUrl($scope.subreddit);
 		$scope.getFeed($scope.feedUrl);
 	}

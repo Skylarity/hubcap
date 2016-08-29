@@ -64,19 +64,21 @@
 											<div class="input-group-addon">/r/</div>
 											<input class="form-control" type="text" id="subreddit" name="subreddit" ng-model="subreddit"/>
 											<div class="input-group-btn">
-												<button type="submit" class="btn btn-success"><i class="fa fa-lg fa-reddit"></i></button>
+												<button type="submit" class="btn btn-success"><i class="fa fa-arrow-right"></i></button>
 											</div>
 										</div>
 									</div>
 								</div>
 							</form>
-							<div ng-repeat="child in feed.children.slice(0, 9)">
+							<div ng-repeat="child in feed.children.slice(0, 10)">
 									<div class="row reddit-post">
 										<div class="col-md-2">
-											<!-- <div class="reddit-score">
-												{{ child.data.score }}
-											</div> -->
-											<img src="{{ child.data.thumbnail }}" alt="thumbnail" class="img-reponsive reddit-thumbnail">
+											<div ng-hide="child.data.thumbnail === 'default' || child.data.thumbnail === ''">
+												<img src="{{ child.data.thumbnail }}" alt="thumbnail" class="img-reponsive reddit-thumbnail">
+											</div>
+											<div ng-show="child.data.thumbnail === 'default' || child.data.thumbnail === ''">
+												<i class="fa fa-3x fa-reddit"></i>
+											</div>
 										</div>
 										<div class="col-md-10">
 											<div class="row">
