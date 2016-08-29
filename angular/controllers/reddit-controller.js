@@ -31,7 +31,7 @@ app.controller("RedditController", ["$scope", "$localStorage", "RedditService", 
 		if ($localStorage.subreddit !== undefined) {
 			$scope.subreddit = $localStorage.subreddit;
 		} else {
-			$scope.subreddit = "ProgrammerHumor";
+			$scope.subreddit = "all";
 		}
 	};
 
