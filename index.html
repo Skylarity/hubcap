@@ -50,13 +50,15 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-6" ng-controller="RedditController">
 					<div class="panel panel-primary animated fadeInUp box-1">
 						<div class="panel-heading">
 							<h3 class="panel-title"><a href="https://www.reddit.com/"><i class="fa fa-reddit-alien"></i>&nbsp;Reddit</a></h3>
 						</div>
 						<div class="panel-body">
-							Reddit feed here!
+							<div ng-repeat="child in feed.children.slice(0, 9)" class="reddit-post">
+								<h4>{{ child.data.title }}</h4>
+							</div>
 						</div>
 					</div>
 				</div>

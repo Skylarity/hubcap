@@ -64,3 +64,10 @@ div, p, th, td, li, h5, h6 {
 .box-3 {
     -webkit-animation-delay: 0.2s;
 }
+
+.reddit-post {
+	margin: 0 0 10px 0;
+	padding: 0 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}

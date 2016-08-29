@@ -1,3 +1,5 @@
 app.service("RedditService", function($http) {
-	// TODO
+	this.getFeed = function(url) {
+		return $http.get(url);
+	};
 });
