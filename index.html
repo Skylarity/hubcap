@@ -71,28 +71,28 @@
 								</div>
 							</form>
 							<div ng-repeat="child in feed.children.slice(0, 10)">
-									<div class="row reddit-post">
-										<div class="col-md-2">
-											<div ng-hide="child.data.thumbnail === 'default' || child.data.thumbnail === ''">
-												<img src="{{ child.data.thumbnail }}" alt="thumbnail" class="img-reponsive reddit-thumbnail">
-											</div>
-											<div ng-show="child.data.thumbnail === 'default' || child.data.thumbnail === ''">
-												<i class="fa fa-3x fa-reddit"></i>
-											</div>
+								<div class="row reddit-post">
+									<div class="col-md-2">
+										<div ng-hide="child.data.thumbnail === 'default' || child.data.thumbnail === ''">
+											<img src="{{ child.data.thumbnail }}" alt="thumbnail" class="img-reponsive reddit-thumbnail">
 										</div>
-										<div class="col-md-10">
-											<div class="row">
-												<a href="https://reddit.com{{ child.data.permalink }}" target="_blank" class="reddit-title">
-													<h4>{{ child.data.title }}</h4>
-												</a>
-											</div>
-											<div class="row">
-												<a href="{{ child.data.url }}" target="_blank" class="reddit-post-link">
-													<small><i class="fa fa-external-link"></i> direct link</small>
-												</a>
-											</div>
+										<div ng-show="child.data.thumbnail === 'default' || child.data.thumbnail === ''">
+											<i class="fa fa-3x fa-reddit"></i>
 										</div>
 									</div>
+									<div class="col-md-10">
+										<div class="row">
+											<a href="https://reddit.com{{ child.data.permalink }}" target="_blank" class="reddit-title">
+												<h4>{{ child.data.title }}</h4>
+											</a>
+										</div>
+										<div class="row">
+											<a href="{{ child.data.url }}" target="_blank" class="reddit-post-link">
+												<small><i class="fa fa-external-link"></i> direct link</small>
+											</a>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
