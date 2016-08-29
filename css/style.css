@@ -29,8 +29,17 @@ a:focus {
 	text-decoration: underline;
 }
 
+h1 {
+	margin: 0;
+	padding: 0;
+}
+
 .btn {
 	transition: 0.1s all;
+}
+
+.jumbotron {
+	padding: 0;
 }
 
 .text-green {
